@@ -42,11 +42,16 @@ $(document).ready(function()
 		reloadContent(true);
 	});
 
-	$(document).on('click', '#layered_form .select, #layered_form input[type=checkbox], #layered_form input[type=radio]', function(e) {
+	$(document).on('click', '#layered_form input[type=checkbox], #layered_form input[type=radio]', function(e) {
 
 		reloadContent(true);
 	});
-
+	
+	//Change event for drop down list
+	$(document).on('change', '#layered_form .select', function(e) {
+		reloadContent(true);
+	});
+	
 	// Changing content of an input text
 	$(document).on('keyup', '#layered_form input.layered_input_range', function(e)
 	{
